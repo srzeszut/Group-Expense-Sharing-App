@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.transaction.AddTransactionFragment">
+
+    <!-- Your form fields go here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Description (String) -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:id="@+id/editTextDescription"/>
+
+        <!-- Payment (Number) -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payment"
+            android:inputType="numberDecimal"
+            android:id="@+id/editTextPayment"/>
+
+        <!-- Category (Single Selection) -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:id="@+id/editCategory"/>
+
+
+        <!-- Text label above the list of people -->
+        <TextView
+            android:id="@+id/textViewPeopleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select People:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+
+        <!-- List of People -->
+        <LinearLayout
+            android:id="@+id/linearLayoutPeople"
+            android:layout_width="match_parent"
+            android:layout_height="287dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addExpenseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="addExpenseButtonClicked"
+            android:text="Add expense" />
+
+
+    </LinearLayout>
+</FrameLayout>
